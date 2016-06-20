@@ -26,8 +26,8 @@
 		E2C13BAD1D17851F00EDE287 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2C13BAC1D17851F00EDE287 /* Photos.framework */; };
 		E2C13BAF1D17852600EDE287 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2C13BAE1D17852600EDE287 /* Foundation.framework */; };
 		E2C13BB11D17852C00EDE287 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2C13BB01D17852C00EDE287 /* UIKit.framework */; };
-		E2C13BB91D17887A00EDE287 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C13BB81D17887A00EDE287 /* UIImage+Resize.m */; };
-		E2C13BBC1D1788B900EDE287 /* UIView+GCAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C13BBB1D1788B900EDE287 /* UIView+GCAdd.m */; };
+		E2C13BCA1D1804DB00EDE287 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C13BC71D1804DB00EDE287 /* UIImage+Resize.m */; };
+		E2C13BCB1D1804DB00EDE287 /* UIView+GCAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C13BC91D1804DB00EDE287 /* UIView+GCAdd.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,10 +61,10 @@
 		E2C13BAE1D17852600EDE287 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E2C13BB01D17852C00EDE287 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E2C13BB21D17860600EDE287 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		E2C13BB71D17887A00EDE287 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
-		E2C13BB81D17887A00EDE287 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
-		E2C13BBA1D1788B900EDE287 /* UIView+GCAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GCAdd.h"; sourceTree = "<group>"; };
-		E2C13BBB1D1788B900EDE287 /* UIView+GCAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GCAdd.m"; sourceTree = "<group>"; };
+		E2C13BC61D1804DB00EDE287 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		E2C13BC71D1804DB00EDE287 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		E2C13BC81D1804DB00EDE287 /* UIView+GCAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GCAdd.h"; sourceTree = "<group>"; };
+		E2C13BC91D1804DB00EDE287 /* UIView+GCAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GCAdd.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +131,10 @@
 		E2C13B911D1784F100EDE287 /* YAssetsPicker */ = {
 			isa = PBXGroup;
 			children = (
-				E2C13BB61D17887A00EDE287 /* Category */,
+				E2C13BC61D1804DB00EDE287 /* UIImage+Resize.h */,
+				E2C13BC71D1804DB00EDE287 /* UIImage+Resize.m */,
+				E2C13BC81D1804DB00EDE287 /* UIView+GCAdd.h */,
+				E2C13BC91D1804DB00EDE287 /* UIView+GCAdd.m */,
 				E2C13B921D1784F100EDE287 /* selectedPic@2x.png */,
 				E2C13B931D1784F100EDE287 /* unSelectedPic@2x.png */,
 				E2C13B941D1784F100EDE287 /* unSelectedPic@3x.png */,
@@ -149,17 +152,6 @@
 				E2C13BA01D1784F100EDE287 /* YPhotoPreviewController.m */,
 			);
 			path = YAssetsPicker;
-			sourceTree = "<group>";
-		};
-		E2C13BB61D17887A00EDE287 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				E2C13BBA1D1788B900EDE287 /* UIView+GCAdd.h */,
-				E2C13BBB1D1788B900EDE287 /* UIView+GCAdd.m */,
-				E2C13BB71D17887A00EDE287 /* UIImage+Resize.h */,
-				E2C13BB81D17887A00EDE287 /* UIImage+Resize.m */,
-			);
-			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,14 +230,14 @@
 				E2C13BA51D1784F100EDE287 /* YAssetsViewController.m in Sources */,
 				E2C13BA81D1784F100EDE287 /* YImagePickerNavController.m in Sources */,
 				E2C13BA61D1784F100EDE287 /* YImageManager.m in Sources */,
-				E2C13BBC1D1788B900EDE287 /* UIView+GCAdd.m in Sources */,
 				E2C13BA71D1784F100EDE287 /* YImageModel.m in Sources */,
+				E2C13BCB1D1804DB00EDE287 /* UIView+GCAdd.m in Sources */,
+				E2C13BCA1D1804DB00EDE287 /* UIImage+Resize.m in Sources */,
 				E2C13B821D17849E00EDE287 /* ViewController.m in Sources */,
 				E2C13B7F1D17849E00EDE287 /* AppDelegate.m in Sources */,
 				E2C13BA91D1784F100EDE287 /* YPhotoPreviewController.m in Sources */,
 				E2C13BA41D1784F100EDE287 /* YAlbumsViewController.m in Sources */,
 				E2C13B7C1D17849E00EDE287 /* main.m in Sources */,
-				E2C13BB91D17887A00EDE287 /* UIImage+Resize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
