@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
-  s.name         = 'YAssetsPickerDemo'
-  s.version      = '0.0.1'
+  s.name         = 'YAssetsPicker'
+  s.version      = '0.0.2'
   s.license      = 'LICENSE'
   s.homepage     = 'https://github.com/BestKai/YAssetsPicker'
 s.authors        = { 'BestKai' => 'bestkai9009@gmail.com' }
