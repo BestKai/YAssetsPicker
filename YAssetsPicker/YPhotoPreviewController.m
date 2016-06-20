@@ -432,7 +432,7 @@
     
     YImageModel *model = _photoArr[_currentIndex];
     [_selectButton setImage:model.selected?[UIImage imageNamed:@"selectedPic"]:[UIImage imageNamed:@"unSelectedPic"] forState:UIControlStateNormal];
-    indexLabel.text = [NSString stringWithFormat:@"%lu / %lu", _currentIndex + 1, (unsigned long)_photoArr.count];
+    indexLabel.text = [NSString stringWithFormat:@"%zd / %zd", _currentIndex + 1,_photoArr.count];
     
     if (self.selectedPhotoArr.count) {
         [_okButton setTitle:[NSString stringWithFormat:@"完成（%ld）",(unsigned long)_selectedPhotoArr.count] forState:UIControlStateNormal];

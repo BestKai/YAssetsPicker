@@ -184,7 +184,7 @@
     
     numberOfAssets = model.count;
     
-    number = [[NSString alloc] initWithFormat:@"(%ld)",numberOfAssets];
+    number = [[NSString alloc] initWithFormat:@"(%zd)",numberOfAssets];
     
     NSString *textString = [NSString stringWithFormat:@"%@  %@",name,number];
     NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:textString];
