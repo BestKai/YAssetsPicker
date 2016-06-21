@@ -7,16 +7,43 @@
 //
 
 #import "ViewController.h"
+#import "YImagePickerNavController.h"
 
-@interface ViewController ()
+@interface ViewController ()<YImageNavControllerDelegate>
+
+@property (nonatomic,strong)YImagePickerNavController *navPicVC;
 
 @end
 
 @implementation ViewController
 
+- (YImagePickerNavController *)navPicVC
+{
+    if (!_navPicVC) {
+        _navPicVC = [[YImagePickerNavController alloc] init];
+        _navPicVC.navDelegate = self;
+        _navPicVC.maxSelectNumber = 9;
+    }
+    return _navPicVC;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    
+    
+    
+}
+- (IBAction)aansdfnansd:(id)sender {
+    
+    [self presentViewController:self.navPicVC animated:YES completion:nil];
+    
+    [self.navPicVC showFirstAssetsController];
+
+    
 }
 
 - (void)didReceiveMemoryWarning {
