@@ -7,15 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E25A1CA61D1CC42C00FF94F8 /* YAssetsPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E25A1CA51D1CC42C00FF94F8 /* YAssetsPicker.bundle */; };
 		E2C13B7C1D17849E00EDE287 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C13B7B1D17849E00EDE287 /* main.m */; };
 		E2C13B7F1D17849E00EDE287 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C13B7E1D17849E00EDE287 /* AppDelegate.m */; };
 		E2C13B821D17849E00EDE287 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C13B811D17849E00EDE287 /* ViewController.m */; };
 		E2C13B851D17849E00EDE287 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C13B831D17849E00EDE287 /* Main.storyboard */; };
 		E2C13B871D17849E00EDE287 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2C13B861D17849E00EDE287 /* Assets.xcassets */; };
 		E2C13B8A1D17849E00EDE287 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C13B881D17849E00EDE287 /* LaunchScreen.storyboard */; };
-		E2C13BA11D1784F100EDE287 /* selectedPic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2C13B921D1784F100EDE287 /* selectedPic@2x.png */; };
-		E2C13BA21D1784F100EDE287 /* unSelectedPic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2C13B931D1784F100EDE287 /* unSelectedPic@2x.png */; };
-		E2C13BA31D1784F100EDE287 /* unSelectedPic@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2C13B941D1784F100EDE287 /* unSelectedPic@3x.png */; };
 		E2C13BA41D1784F100EDE287 /* YAlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C13B961D1784F100EDE287 /* YAlbumsViewController.m */; };
 		E2C13BA51D1784F100EDE287 /* YAssetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C13B981D1784F100EDE287 /* YAssetsViewController.m */; };
 		E2C13BA61D1784F100EDE287 /* YImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C13B9A1D1784F100EDE287 /* YImageManager.m */; };
@@ -31,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E25A1CA51D1CC42C00FF94F8 /* YAssetsPicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = YAssetsPicker.bundle; sourceTree = "<group>"; };
+		E25A1CA81D1CC4D000FF94F8 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E2C13B771D17849E00EDE287 /* YAssetsPickerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YAssetsPickerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2C13B7B1D17849E00EDE287 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E2C13B7D1D17849E00EDE287 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -41,9 +41,6 @@
 		E2C13B861D17849E00EDE287 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2C13B891D17849E00EDE287 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2C13B8B1D17849E00EDE287 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E2C13B921D1784F100EDE287 /* selectedPic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selectedPic@2x.png"; sourceTree = "<group>"; };
-		E2C13B931D1784F100EDE287 /* unSelectedPic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unSelectedPic@2x.png"; sourceTree = "<group>"; };
-		E2C13B941D1784F100EDE287 /* unSelectedPic@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unSelectedPic@3x.png"; sourceTree = "<group>"; };
 		E2C13B951D1784F100EDE287 /* YAlbumsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAlbumsViewController.h; sourceTree = "<group>"; };
 		E2C13B961D1784F100EDE287 /* YAlbumsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAlbumsViewController.m; sourceTree = "<group>"; };
 		E2C13B971D1784F100EDE287 /* YAssetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAssetsViewController.h; sourceTree = "<group>"; };
@@ -60,7 +57,6 @@
 		E2C13BAC1D17851F00EDE287 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		E2C13BAE1D17852600EDE287 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E2C13BB01D17852C00EDE287 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		E2C13BB21D17860600EDE287 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E2C13BC61D1804DB00EDE287 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
 		E2C13BC71D1804DB00EDE287 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		E2C13BC81D1804DB00EDE287 /* UIView+GCAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GCAdd.h"; sourceTree = "<group>"; };
@@ -110,12 +106,12 @@
 				E2C13B7E1D17849E00EDE287 /* AppDelegate.m */,
 				E2C13B801D17849E00EDE287 /* ViewController.h */,
 				E2C13B811D17849E00EDE287 /* ViewController.m */,
+				E25A1CA81D1CC4D000FF94F8 /* PrefixHeader.pch */,
 				E2C13B831D17849E00EDE287 /* Main.storyboard */,
 				E2C13B861D17849E00EDE287 /* Assets.xcassets */,
 				E2C13B881D17849E00EDE287 /* LaunchScreen.storyboard */,
 				E2C13B8B1D17849E00EDE287 /* Info.plist */,
 				E2C13B7A1D17849E00EDE287 /* Supporting Files */,
-				E2C13BB21D17860600EDE287 /* PrefixHeader.pch */,
 			);
 			path = YAssetsPickerDemo;
 			sourceTree = "<group>";
@@ -131,13 +127,11 @@
 		E2C13B911D1784F100EDE287 /* YAssetsPicker */ = {
 			isa = PBXGroup;
 			children = (
+				E25A1CA51D1CC42C00FF94F8 /* YAssetsPicker.bundle */,
 				E2C13BC61D1804DB00EDE287 /* UIImage+Resize.h */,
 				E2C13BC71D1804DB00EDE287 /* UIImage+Resize.m */,
 				E2C13BC81D1804DB00EDE287 /* UIView+GCAdd.h */,
 				E2C13BC91D1804DB00EDE287 /* UIView+GCAdd.m */,
-				E2C13B921D1784F100EDE287 /* selectedPic@2x.png */,
-				E2C13B931D1784F100EDE287 /* unSelectedPic@2x.png */,
-				E2C13B941D1784F100EDE287 /* unSelectedPic@3x.png */,
 				E2C13B951D1784F100EDE287 /* YAlbumsViewController.h */,
 				E2C13B961D1784F100EDE287 /* YAlbumsViewController.m */,
 				E2C13B971D1784F100EDE287 /* YAssetsViewController.h */,
@@ -211,11 +205,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2C13BA21D1784F100EDE287 /* unSelectedPic@2x.png in Resources */,
-				E2C13BA11D1784F100EDE287 /* selectedPic@2x.png in Resources */,
 				E2C13B8A1D17849E00EDE287 /* LaunchScreen.storyboard in Resources */,
 				E2C13B871D17849E00EDE287 /* Assets.xcassets in Resources */,
-				E2C13BA31D1784F100EDE287 /* unSelectedPic@3x.png in Resources */,
+				E25A1CA61D1CC42C00FF94F8 /* YAssetsPicker.bundle in Resources */,
 				E2C13B851D17849E00EDE287 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,7 +342,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/wangyunkai/Desktop/YAssetsPicker/YAssetsPickerDemo/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/bestkai/Desktop/YAssetsPicker/YAssetsPickerDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = YAssetsPickerDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -364,7 +356,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/wangyunkai/Desktop/YAssetsPicker/YAssetsPickerDemo/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/bestkai/Desktop/YAssetsPicker/YAssetsPickerDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = YAssetsPickerDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

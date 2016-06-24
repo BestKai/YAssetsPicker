@@ -21,6 +21,8 @@
 @class YImagePickerNavController;
 @protocol YImageNavControllerDelegate <NSObject>
 
+
+@optional
 - (void)imagePickerNavController:(YImagePickerNavController *)navControlelr DidFinshed:(NSMutableArray *)selectedArray;
 
 @end

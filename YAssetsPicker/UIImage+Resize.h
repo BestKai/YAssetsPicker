@@ -12,4 +12,7 @@
 
 - (UIImage *)fixOrientation;
 
+
++ (UIImage *)imageInBundleWithName:(NSString *)name;
+
 @end

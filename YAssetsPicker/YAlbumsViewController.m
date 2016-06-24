@@ -240,7 +240,9 @@
 {
     if (self.navController.navDelegate) {
         
-        [self.navController.navDelegate imagePickerNavController:self.navController DidFinshed:nil];
+        if (self.navController.navDelegate && [self.navController.navDelegate respondsToSelector:@selector(imagePickerNavController:DidFinshed:)]) {
+            [self.navController.navDelegate imagePickerNavController:self.navController DidFinshed:nil];
+        }
     }
 }
 

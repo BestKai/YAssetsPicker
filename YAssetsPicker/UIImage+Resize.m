@@ -90,5 +90,16 @@
     return img;
 }
 
++ (UIImage *)imageInBundleWithName:(NSString *)name
+{
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    
+    NSString *bundlePath = [mainBundle pathForResource:@"YAssetsPicker" ofType:@"bundle"];
+    
+    UIImage *image = [UIImage imageWithContentsOfFile:[[NSBundle bundleWithPath:bundlePath] pathForResource:[name stringByAppendingString:@"@2x"] ofType:@"png"]];
+    
+    return image;
+}
+
 
 @end

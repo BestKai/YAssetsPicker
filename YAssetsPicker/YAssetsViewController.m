@@ -10,7 +10,7 @@
 #import "YImagePickerNavController.h"
 #import "YImageModel.h"
 #import "YPhotoPreviewController.h"
-
+#import "UIImage+Resize.h"
 
 #pragma mark ----- colllectionCell
 @implementation YGrideCollectionCell
@@ -58,10 +58,10 @@
         });
     }
     if (model.selected) {
-        [_selectButton setImage:[UIImage imageNamed:@"selectedPic"] forState:UIControlStateNormal];
+        [_selectButton setImage:[UIImage imageInBundleWithName:@"selectedPic"] forState:UIControlStateNormal];
     }else
     {
-        [_selectButton setImage:[UIImage imageNamed:@"unSelectedPic"] forState:UIControlStateNormal];
+        [_selectButton setImage:[UIImage imageInBundleWithName:@"unSelectedPic"] forState:UIControlStateNormal];
     }
 }
 
@@ -108,7 +108,7 @@
     self.edgesForExtendedLayout = UIRectEdgeBottom;
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"backImage"] style:UIBarButtonItemStylePlain target:self action:@selector(back)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageInBundleWithName:@"backImage"] style:UIBarButtonItemStylePlain target:self action:@selector(back)];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(dismissAction)];
     
@@ -395,10 +395,10 @@
     }
     if (!model.selected) {
         
-        [cell.selectButton setImage:[UIImage imageNamed:@"unSelectedPic"] forState:UIControlStateNormal];
+        [cell.selectButton setImage:[UIImage imageInBundleWithName:@"unSelectedPic"] forState:UIControlStateNormal];
     }else
     {
-        [cell.selectButton setImage:[UIImage imageNamed:@"selectedPic"] forState:UIControlStateNormal];
+        [cell.selectButton setImage:[UIImage imageInBundleWithName:@"selectedPic"] forState:UIControlStateNormal];
 
         [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut animations:^{
             
@@ -462,7 +462,11 @@
 {
     if (self.navController.navDelegate) {
         
-        [self.navController.navDelegate imagePickerNavController:self.navController DidFinshed:self.selectedAssets];
+        
+        if (self.navController.navDelegate && [self.navController.navDelegate respondsToSelector:@selector(imagePickerNavController:DidFinshed:)]) {
+            [self.navController.navDelegate imagePickerNavController:self.navController DidFinshed:self.selectedAssets];
+        }
+        
     }
 }
 
@@ -470,7 +474,10 @@
 {
     if (self.navController.navDelegate) {
         
-        [self.navController.navDelegate imagePickerNavController:self.navController DidFinshed:nil];
+        
+        if (self.navController.navDelegate && [self.navController.navDelegate respondsToSelector:@selector(imagePickerNavController:DidFinshed:)]) {
+            [self.navController.navDelegate imagePickerNavController:self.navController DidFinshed:nil];
+        }
     }
 }
 

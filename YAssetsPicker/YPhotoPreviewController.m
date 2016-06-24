@@ -349,11 +349,18 @@
         if (assetVC.navController.navDelegate) {
             
             if (_selectedPhotoArr.count) {
-                [assetVC.navController.navDelegate imagePickerNavController:assetVC.navController DidFinshed:_selectedPhotoArr];
+                
+                if (assetVC.navController.navDelegate && [assetVC.navController.navDelegate respondsToSelector:@selector(imagePickerNavController:DidFinshed:)]) {
+                    [assetVC.navController.navDelegate imagePickerNavController:assetVC.navController DidFinshed:_selectedPhotoArr];
+                }
+                
             }else
             {
                 NSMutableArray *selectArr = [NSMutableArray arrayWithObjects:_photoArr[_currentIndex], nil];
-                [assetVC.navController.navDelegate imagePickerNavController:assetVC.navController DidFinshed:selectArr];
+                
+                if (assetVC.navController.navDelegate && [assetVC.navController.navDelegate respondsToSelector:@selector(imagePickerNavController:DidFinshed:)]) {
+                    [assetVC.navController.navDelegate imagePickerNavController:assetVC.navController DidFinshed:selectArr];
+                }
             }
         }
     }else
