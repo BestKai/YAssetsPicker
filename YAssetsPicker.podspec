@@ -11,5 +11,5 @@ s.authors        = { 'BestKai' => 'bestkai9009@gmail.com' }
   s.source_files = 'YAssetsPicker/**/*.{h,m}'
   s.frameworks   =  'Photos','AddressBook'
   s.requires_arc = true
-
+  s.resources    = 'YAssetsPicker/YAssetsPicker.bundle'
 end
