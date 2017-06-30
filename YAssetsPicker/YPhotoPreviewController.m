@@ -9,7 +9,7 @@
 #import "YPhotoPreviewController.h"
 #import "YImageManager.h"
 #import "UIView+GCAdd.h"
-
+#import "UIImage+Resize.h"
 @interface YPhotoPreviewCell ()<UIGestureRecognizerDelegate,UIScrollViewDelegate> {
     CGFloat _aspectRatio;
 }
@@ -175,13 +175,13 @@
     _naviBar.backgroundColor = [UIColor colorWithRed:(34/255.0) green:(34/255.0)  blue:(34/255.0) alpha:.7];
     
     _backButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 44, 44)];
-    [_backButton setImage:[UIImage imageNamed:@"backImageWhite"] forState:UIControlStateNormal];
+    [_backButton setImage:[UIImage imageInBundleWithName:@"backImage_white"] forState:UIControlStateNormal];
     [_backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     
     
     _selectButton = [[UIButton alloc] initWithFrame:CGRectMake(screenWidth-52, 20, 30, 30)];
-    [_selectButton setImage:[UIImage imageNamed:@"unSelectedPic"] forState:UIControlStateNormal];
+    [_selectButton setImage:[UIImage imageInBundleWithName:@"unSelectedPic"] forState:UIControlStateNormal];
     [_selectButton addTarget:self action:@selector(select:) forControlEvents:UIControlEventTouchUpInside];
     
     
@@ -294,7 +294,7 @@
         
         [self.selectedPhotoArr addObject:model];
 
-        [selectButton setImage:[UIImage imageNamed:@"selectedPic"] forState:UIControlStateNormal];
+        [selectButton setImage:[UIImage imageInBundleWithName:@"selectedPic"] forState:UIControlStateNormal];
 
         [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseInOut animations:^{
             
@@ -318,7 +318,7 @@
             [_selectedPhotoArr removeObject:model];
         }
         
-        [selectButton setImage:[UIImage imageNamed:@"unSelectedPic"] forState:UIControlStateNormal];
+        [selectButton setImage:[UIImage imageInBundleWithName:@"unSelectedPic"] forState:UIControlStateNormal];
     }
     
     if (self.selectedPhotoArr.count) {
@@ -438,7 +438,7 @@
 - (void)refreshNaviBarAndBottomBarState {
     
     YImageModel *model = _photoArr[_currentIndex];
-    [_selectButton setImage:model.selected?[UIImage imageNamed:@"selectedPic"]:[UIImage imageNamed:@"unSelectedPic"] forState:UIControlStateNormal];
+    [_selectButton setImage:model.selected?[UIImage imageInBundleWithName:@"selectedPic"]:[UIImage imageInBundleWithName:@"unSelectedPic"] forState:UIControlStateNormal];
     indexLabel.text = [NSString stringWithFormat:@"%zd / %zd", _currentIndex + 1,_photoArr.count];
     
     if (self.selectedPhotoArr.count) {

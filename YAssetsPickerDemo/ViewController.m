@@ -46,6 +46,13 @@
     
 }
 
+#pragma mark --- YImageNavControllerDelegate
+- (void)imagePickerNavController:(YImagePickerNavController *)navControlelr DidFinshed:(NSMutableArray *)selectedArray{
+    
+    [self.navPicVC dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

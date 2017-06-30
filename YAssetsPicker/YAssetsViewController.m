@@ -263,7 +263,8 @@
     
     [previewButton addTarget:self action:@selector(previewSelectedPhotos) forControlEvents:UIControlEventTouchUpInside];
     
-    previewButton.hidden = YES;
+    previewButton.userInteractionEnabled = NO;
+    previewButton.alpha = 0.4;
     
     [bottomView addSubview:previewButton];
     
@@ -280,10 +281,10 @@
     [doneButton setBackgroundColor:[UIColor redColor]];
     doneButton.titleLabel.font = [UIFont systemFontOfSize:14.0];
     
-    doneButton.hidden = YES;
+    doneButton.userInteractionEnabled = NO;
     
     [doneButton setTitle:@"完成" forState:UIControlStateNormal];
-    
+    doneButton.alpha = 0.4;
     [bottomView addSubview:doneButton];
     
     [self.view addSubview:bottomView];
@@ -433,17 +434,26 @@
 {
     if (self.selectedAssets.count) {
         
-        previewButton.hidden = NO;
+        previewButton.userInteractionEnabled = YES;
         
         [previewButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         
-        doneButton.hidden = NO;
+        doneButton.userInteractionEnabled = YES;
         
         [doneButton setTitle:[NSString stringWithFormat:@"完成（%zd）",self.selectedAssets.count] forState:UIControlStateNormal];
+        
+        doneButton.alpha = 1;
+        previewButton.alpha = 1;
+        
     }else
     {
-        previewButton.hidden = YES;
-        doneButton.hidden = YES;
+        previewButton.userInteractionEnabled = NO;
+        doneButton.userInteractionEnabled = NO;
+        
+        [doneButton setTitle:@"完成" forState:UIControlStateNormal];
+        
+        doneButton.alpha = 0.4;
+        previewButton.alpha = 0.4;
     }
 }
 
